@@ -1,0 +1,9 @@
+{
+    "database": {
+        "host": "localhost",
+        "name": "nats_example",
+        "user": "",
+        "password": ""
+    },
+    "port": 3000
+}
