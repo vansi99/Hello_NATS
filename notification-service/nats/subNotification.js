@@ -13,11 +13,11 @@ async function subNotification(){
         process.exit();
     });
 
-    const subject = 'notfication register';
+    const subject = 'notfication_register';
 
     console.log('Listening on [' + subject + ']');
     try {
-        await nats.subscribe(subject, function(msg) {
+        await nats.subscribe(subject, {'queue': "my_queue"}, function(msg) {
             console.log('Received "' + msg + '"');
             notfication.sendMessageToEmail(msg);
         });
